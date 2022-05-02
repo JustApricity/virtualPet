@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="content">
+    <h1>Customize Your Swooshy!</h1>
+    <button id="plain">Plain</button>
+    <button id="sunset">Sunset</button>
+    <button id="aquatic">Aquatic</button>
+    <button id="equatorial">Equatorial</button>
+    <button id="winter">Winter</button>
+    <button id="sky">Aerobic</button>
+    <button id="rainbow">Rainbow</button>
+    <button id="night">Nocturnal</button>
+</div>
+<img src="#" alt="you didn't click anything!">
+<div class="done">
+    <button id="finish" onclick="alert('thank you for playing!')">I'm Done!</button>
+
+</div>
+</body>
+<script>
+    const plain = document.getElementById('plain');
+    const sunset = document.getElementById('sunset');
+    const aquatic = document.getElementById('aquatic');
+    const equatorial = document.getElementById('equatorial');
+    const winter = document.getElementById('winter');
+    const sky = document.getElementById('sky');
+    const rainbow = document.getElementById('rainbow');
+    const night = document.getElementById('night');
+    const img = document.querySelector('img')
+
+
+    plain.addEventListener('click', function(e){
+        img.src = "plain.jpg"
+    });
+    sunset.addEventListener('click', function(e){
+        img.src = "sunset.jpg"
+    });
+    aquatic.addEventListener('click', function(e){
+            img.src = "aquatic.jpg"
+        });
+    equatorial.addEventListener('click', function(e){
+        img.src = "equitorial.jpg"
+    });
+        winter.addEventListener('click', function(e){
+            img.src = "winter.jpg"
+        });
+        sky.addEventListener('click', function(e){
+            img.src = "sky.jpg"
+        });
+        rainbow.addEventListener('click', function(e){
+            img.src = "rainbow.jpg"
+        });
+        night.addEventListener('click', function(e){
+            img.src = "night.jpg"
+        });
+</script>
+</html>
