@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Pet</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="names">
+            <h1 class="username"></h1>
+            <h1 class="swooshyname"></h1>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+const first = document.getElementById("first");
+const last = document.getElementById("last");
+const pet = document.getElementById("petName")
+const create = document.createElement('h1');
+const userName = document.getElementsByClassName("username");
+const swooshyName = document.getElementsByClassName("swooshyname");
+
+create.innerHTML = `${first} ${last}'s Swooshy!`;
+create.innerHTML = `${pet}`;
+userName.insertAdjacentElement('beforebegin', create);
+
+
+
+</script>
+</html>
