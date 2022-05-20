@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Virtual Pet</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <div class="names">
-            <h1 class="username"></h1>
-            <h1 class="swooshyname"></h1>
-        </div>
+        <h4><i>Own your own virtual Swooshy!</i></h4>
+        <label for="first">Your First Name</label>
+        <input id="first" name="first_name" type="text">
+        <label for="last">Your Last Name</label>
+        <input id="last" name="last_name" type="text">
+        <h4>Your Swooshy's name:</h4>
+        <label for="petName">Your Swooshy's name:</label>
+        <textarea id="petName" name="pet_name" rows="1" cols="10" placeholder="Fluffy... "></textarea>
+
+        <h4 class="confirmName"></h4>
+        <button id="confirmButton">That's Me!</button>
     </div>
 </div>
-</body>
 <script>
-const first = document.getElementById("first");
-const last = document.getElementById("last");
-const pet = document.getElementById("petName")
-const create = document.createElement('h1');
-const userName = document.getElementsByClassName("username");
-const swooshyName = document.getElementsByClassName("swooshyname");
+    const first = document.getElementById("first");
+    const last = document.getElementById("last");
+    const pet = document.getElementById("petName");
+    const userName = document.getElementsByClassName("username");
+    const swooshyName = document.getElementsByClassName("swooshyname");
+    const create = document.createElement('h1');
+    const confirmbutton = document.getElementById("confirmButton");
+    const confirmbutton = addEventListener("click", function(
+    create.append(`${first} ${last}'s Swooshy!`);
+    create.append(`${pet}`);
+    userName.insertAdjacentElement('beforebegin', create);
+                                                             ));
 
-create.innerHTML = `${first} ${last}'s Swooshy!`;
-create.innerHTML = `${pet}`;
-userName.insertAdjacentElement('beforebegin', create);
+
+
 
 
 
 </script>
+</body>
+
 </html>
