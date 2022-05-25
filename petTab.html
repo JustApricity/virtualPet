@@ -19,27 +19,26 @@
 
         <h4 class="confirmName"></h4>
         <button id="confirmButton">That's Me!</button>
+        <div class="username">
+        </div>
+        <div class="swooshyname">
+        </div>
     </div>
 </div>
 <script>
     const first = document.getElementById("first");
     const last = document.getElementById("last");
     const pet = document.getElementById("petName");
-    const userName = document.getElementsByClassName("username");
-    const swooshyName = document.getElementsByClassName("swooshyname");
+    const userName = document.querySelector(".username");
+    const swooshyName = document.querySelector(".swooshyname");
     const create = document.createElement('h1');
     const confirmbutton = document.getElementById("confirmButton");
-    const confirmbutton = addEventListener("click", function(
-    create.append(`${first} ${last}'s Swooshy!`);
-    create.append(`${pet}`);
-    userName.insertAdjacentElement('beforebegin', create);
-                                                             ));
-
-
-
-
-
-
+    confirmbutton.addEventListener('click', function(){
+        create.append(`${first.value} ${last.value}'s `);
+        create.append(`new Swooshy is named: ${pet.value}!`);
+        userName.insertAdjacentElement('beforeend', create);
+        swooshyName.insertAdjacentElement('beforeend', create);
+    });
 </script>
 </body>
 
